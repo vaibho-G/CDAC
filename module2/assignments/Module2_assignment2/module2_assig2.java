@@ -2,53 +2,32 @@ package module2_assignment2;
 import java.util.Scanner;
 
 
+//Implement a program that calculates the Body Mas
+//s Index (BMI) based on height and weight input using 
+//if-else to classify the BMI int categories 
+//(underweight, normal weight, overweight,etc).
 
 public class module2_assig2 {
 	
-	public static boolean isLeapYearifelse(int year) {
-	    if (year % 4 == 0) {
-	        if (year % 100 == 0) {
-	            return year % 400 == 0;
-	        } else {
-	            return true;
-	        }
-	    } else {
-	        return false;
-	    }
-	};
-	private static boolean LeapYearSwitchCase(int year) {
-        switch (year % 4) {
-            case 0:
-                switch (year % 100) {
-                    case 0:
-                        return (year % 400 == 0);
-                    default:
-                        return true;
-                }
-            default:
-                return false;
-        }
-    }
 	 public static void main(String[] args) {
 	        Scanner scan = new Scanner(System.in);
 
-	        // Input year
-	        System.out.println("Enter a year: ");
-	        int year = scan.nextInt();
+	        System.out.println("Enter a height: ");
+	        int height = scan.nextInt();
+	        System.out.println("Enter a weight: ");
+	        int weight = scan.nextInt();
 	        
-	        System.out.println("year is "+ year);
+	        System.out.println("hieght and weight is "+ height +" "+ weight);
 	        
 	        
-	        if (isLeapYearifelse(year)) {
-	            System.out.println(year + " is a leap year through ifelse.");
-	        } else {
-	            System.out.println(year + " is not a leap year through ifelse.");
-	        }
-	        if (LeapYearSwitchCase(year)) {
-	            System.out.println(year + " is a leap year with switch");
-	        } else {
-	            System.out.println(year + " is not a leap year with switch");
-	        }
+	       int bmi = height * weight;
+	       System.out.println("bmi is: " + bmi);
+	       if(bmi>=0 && bmi<=10)
+	    	   System.out.println("you are underweight ");
+	       else if(bmi>11 && bmi<=30)
+	    	   System.out.println("you are normal weight ");
+	       else if(bmi>=31 && bmi<100)
+	    	   System.out.println("you are normal weight ");
 
 	        scan.close();
 	        
