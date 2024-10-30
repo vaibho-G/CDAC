@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        max-width: 1200px;
+    }
+    
+    /* Left Section */
+    .left-section {
+        background-color: #2ce9df;
+        color: white;
+        padding: 40px;
+        width: 40%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    .left-section h2 {
+        margin-bottom: 20px;
+    }
+    
+    .left-section p {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    
+    .social-icons {
+        margin-top: 20px;
+    }
+    
+    .social-icons a {
+        text-decoration: none;
+        color: white;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+    
+    /* Right Section */
+    .right-section {
+        background-color: #ffffff;
+        padding: 40px;
+        width: 60%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .right-section h2 {
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    input, textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Section (Get in Touch) -->
+    <div class="left-section">
+        <h2>Get in touch</h2>
+        <p><strong>Name: </strong>HTML CSS Tutorials</p>
+        <p><strong>Email: </strong>htmlcsstutorials@gmail.com</p>
+        <p><strong>Phone: </strong>+91 1234567890</p>
+        <p><strong>Address: </strong>123 Street, Bangalore, India, 500001</p>
+
+        <div class="social-icons">
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+            <a href="#">YT</a>
+        </div>
+    </div>
+
+    <!-- Right Section (Contact Us Form) -->
+    <div class="right-section">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" value="HTMLCSS Tutorials" required>
+
+            <label for="email">Email Id</label>
+            <input type="email" id="email" name="email" value="hhhh@" required>
+
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
