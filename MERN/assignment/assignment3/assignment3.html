@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>mera page</title>
+        <style>
+            .high {
+            color: black;
+            transition: color 0.3s ease;
+        }
+        .high:hover {
+            color: red;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div id="text">
+            JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+        </div>
+        <br>
+        <button onclick="bold()">submit </button>
+        <br>
+        <form action="form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="contact">Contact:</label><br>
+            <input type="tel" id="contact" name="contact" required><br><br>
+
+            <button type="button" onclick="displayInfo()">Submit</button>
+        </form>
+        <div>
+            <p id="displayName">Name: </p>
+            <p id="displayEmail">Email: </p>
+            <p id="displayContact">Contact: </p>
+        </div>
+        <div>
+            <select id="myDropdown">
+                <option value="apple">A</option>
+                <option value="banana">B</option>
+                <option value="cherry">C</option>
+                <option value="date">D</option>
+            </select>
+            <button onclick="remove()">Remove Selected Item</button>
+        </div>
+        <br>
+        <p>
+            <span class="high" >JavaScript </span> (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the
+            <span class="high">scripting language </span> for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. 
+            <span class="high">JavaScript</span>  is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting 
+            <span class="high">object-oriented</span> , imperative, and declarative (e.g. functional programming) styles.
+        </p>
+    </body>
+    <script>
+        function bold(){
+            var p= document.getElementById("text");
+            p.style.color="blue";
+            p.style.fontSize = "20px";
+            p.style.fontStyle = "italic";
+        }
+        function displayInfo() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var contact = document.getElementById("contact").value;
+
+       
+        document.getElementById("displayName").textContent = "Name: " + name;
+        document.getElementById("displayEmail").textContent = "Email: " + email;
+        document.getElementById("displayContact").textContent = "Contact: " + contact;
+        }
+        function remove() {
+        var dropdown = document.getElementById("myDropdown");
+        dropdown.remove(dropdown.selectedIndex); 
+        }
+    </script>
+</html>
